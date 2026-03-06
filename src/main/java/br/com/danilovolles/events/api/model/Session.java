@@ -1,6 +1,7 @@
 package br.com.danilovolles.events.api.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,8 +9,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name = "tbl_session")
 public class Session {
@@ -17,7 +17,7 @@ public class Session {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "session_id", nullable = false)
-    private Integer idSession;
+    private Integer sessionId;
 
     @Column(name = "session_title", nullable = false)
     private String title;
