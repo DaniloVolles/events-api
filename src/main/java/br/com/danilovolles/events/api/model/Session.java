@@ -32,11 +32,4 @@ public class Session {
     @JoinColumn(name = "tbl_conference_id_conference")
     private Conference conference;
 
-    @ManyToMany
-    @JoinTable(
-            name = "tbl_subscription",
-            joinColumns = @JoinColumn(referencedColumnName = "session_id"),
-            inverseJoinColumns = @JoinColumn(name = "subscribed_user_id", referencedColumnName = "user_id")
-    )
-    private List<User> users;
 }

@@ -23,6 +23,4 @@ public class User {
     @Column(name = "user_email", length = 250, nullable = false, unique = true)
     private String email;
 
-    @ManyToMany(mappedBy = "users")
-    private List<Session> sessions;
 }
